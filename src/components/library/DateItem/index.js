@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { updDate } from '../../../actions';
 import Popup from '../Popup';
 
-const DateItem = ({ day, date, month, year, active, updDate }) => {
+const DateItem = ({ day, date, month, year, previousMonth, active, updDate }) => {
 
     const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
     let dayOpt;
@@ -31,7 +31,7 @@ const DateItem = ({ day, date, month, year, active, updDate }) => {
     }
 
     return (
-            <div className={active ? 'calendar-col active' : 'calendar-col'} onClick={showDate} > { date} </div>
+            <div className={(active ? 'calendar-col active' : 'calendar-col ') + (previousMonth ? ' prev-month' : '')} onClick={showDate} > { date} </div>
      
     )
 }

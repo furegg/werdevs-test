@@ -262,6 +262,10 @@ html, body {
                   background: #FDD000;
                   color: #000;
                 }
+
+                &.prev-month {
+                  opacity: .2;
+                }
             }
         }
     }
@@ -456,7 +460,7 @@ html, body {
             &-col {
                 width: 100%;
                 height: 100%;
-                padding: 4px;
+                padding: 18%;
                 color: #DFDFDF;
                 font-size: 19px;
                 
@@ -509,4 +513,12 @@ html, body {
       height: calc(100vh - 110px);
     }
 
+  }
+
+  @media screen and (max-width: 321px) {
+
+    .content-calendar .calendar-col {
+      padding: 4px;
+      font-size: 16px;
+    }
   }
