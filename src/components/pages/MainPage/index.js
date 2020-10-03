@@ -40,7 +40,7 @@ const MainPage = () => {
     let content = [];
     // console.log(startDay)
     for (let i = 0; i < startDay; i++) {
-      content = [...content, <DateItem key={i - 7 + date.getFullYear() + month} date={(dayInMonth > 0 ? dayInMonth[month - 1] - (startDay - i - 1) : dayInMonth[12 - 1] - (startDay - i - 1))} previousMonth={true} />];
+      content = [...content, <DateItem key={i - 7 + date.getFullYear() + month} date={(dayInMonth > 0 ? dayInMonth[month - 1] - (startDay - i - 1) : dayInMonth[12 - 1] - (startDay - i - 1))} day={ i } month={monthesNames[(month > 0 ? month - 1 : month + 11) ] } previousMonth={true} />];
     }
     for (let i = 1; i <= daysTotal; i++) {
       if (i === curDay && month === new Date().getMonth()) {
